@@ -44,5 +44,13 @@ public class Product {
 	public void setStock(int stock) {
 		this.stock = stock;
 	}
+	
+	public void descProduct() {
+		System.out.printf("Id: %d, Nome : %s, Preço: %.2f, Estoque: %d\n", 
+						  this.id, 
+						  this.name,
+						  this.price,
+						  this.stock);
+	}
 
 }

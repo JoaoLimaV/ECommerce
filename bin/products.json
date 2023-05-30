@@ -1,0 +1,64 @@
+{
+  "products": [
+    {
+      "price": 12.0,
+      "name": "Bolacha Creme Crack",
+      "id": 1,
+      "stock": 15
+    },
+    {
+      "price": 2.5,
+      "name": "Sabonete Lux",
+      "id": 2,
+      "stock": 20
+    },
+    {
+      "price": 5.99,
+      "name": "Camiseta Branca",
+      "id": 3,
+      "stock": 10
+    },
+    {
+      "price": 8.75,
+      "name": "Caneta Esferográfica",
+      "id": 4,
+      "stock": 30
+    },
+    {
+      "price": 3.49,
+      "name": "Maçã Gala",
+      "id": 5,
+      "stock": 25
+    },
+    {
+      "price": 19.99,
+      "name": "Tênis Esportivo",
+      "id": 6,
+      "stock": 5
+    },
+    {
+      "price": 1.99,
+      "name": "Lápis de Cor",
+      "id": 7,
+      "stock": 40
+    },
+    {
+      "price": 6.5,
+      "name": "Caderno Universitário",
+      "id": 8,
+      "stock": 12
+    },
+    {
+      "price": 4.75,
+      "name": "Caneca de Porcelana",
+      "id": 9,
+      "stock": 18
+    },
+    {
+      "price": 7.25,
+      "name": "Fone de Ouvido",
+      "id": 10,
+      "stock": 8
+    }
+  ]
+}
