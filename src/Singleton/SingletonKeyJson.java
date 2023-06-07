@@ -1,3 +1,4 @@
+package Singleton;
 import java.io.FileReader;
 
 import org.json.simple.JSONObject;

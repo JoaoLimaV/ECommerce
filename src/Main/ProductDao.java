@@ -1,3 +1,5 @@
+package Main;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -7,6 +9,10 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import Crud.FormatJson;
+
+import Singleton.SingletonKeyJson;
+
+import Builder.ProductBuilder;
 
 public class ProductDao {
 	
@@ -35,7 +41,12 @@ public class ProductDao {
             Double price = (Double) product.get("price");   
             int stock = ((Number) product.get("stock")).intValue();
                      
-            Product productObj = new Product(id, name, price, stock);
+            Product productObj = new ProductBuilder()
+            		.withId(id)
+            		.withName(name)
+            		.withPrice(price)
+            		.withStock(stock)
+            		.build();
             
             productsList.add(productObj);
         }
