@@ -1,16 +1,18 @@
 package Main;
 
-public class Vendor {
+import Observer.InterfaceObserver;
+
+public class Vendor implements InterfaceObserver{
 
 	private int id;
 	private String name;
-	private int CNPJ;
-	private String ratingsStars;
+	private String cnpj;
+	private double ratingsStars;
 	
-	public Vendor(int id, String name, int cNPJ, String ratingsStars) {
+	public Vendor(int id, String name, String cnpj, double ratingsStars) {
 		this.id = id;
 		this.name = name;
-		CNPJ = cNPJ;
+		this.cnpj = cnpj;
 		this.ratingsStars = ratingsStars;
 	}
 
@@ -18,35 +20,22 @@ public class Vendor {
 		return id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
-
 	public String getName() {
 		return name;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public String getCNPJ() {
+		return cnpj;
 	}
 
-	public int getCNPJ() {
-		return CNPJ;
-	}
-
-	public void setCNPJ(int cNPJ) {
-		CNPJ = cNPJ;
-	}
-
-	public String getRatingsStars() {
+	public double getRatingsStars() {
 		return ratingsStars;
 	}
 
-	public void setRatingsStars(String ratingsStars) {
-		this.ratingsStars = ratingsStars;
+	@Override
+	public void sellProduct(Product product) {
+		System.out.println("\n\u001B[32m Você Acaba de Vender um Produto!!! \033[0m");
+		product.infoProduct();
 	}
-	
-	
-	
-	
+
 }

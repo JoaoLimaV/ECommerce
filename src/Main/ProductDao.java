@@ -15,37 +15,57 @@ import Singleton.SingletonKeyJson;
 import Builder.ProductBuilder;
 
 public class ProductDao {
-	
-	public String update(Product product) {
-		return "Sucessfull update";
-	}
-	
-	public Product find(long id) {
-		return null;
+
+	public Product find(int idProduct) {
+		 JSONArray products = (JSONArray) SingletonKeyJson.getConnection().get("products");
+		 Product productObj = null;
+		 
+         for (Object ob : products) {
+             JSONObject product = (JSONObject) ob;
+
+             int id = ((Number) product.get("id")).intValue();
+             
+             if (id == idProduct) {
+     			 String name = (String) product.get("name");
+                 Double price = (Double) product.get("price");   
+                 int stock = ((Number) product.get("stock")).intValue();
+                 int vendorID = ((Number) product.get("vendorID")).intValue();
+                 
+                 productObj = new ProductBuilder()
+                		.withId(id)
+                 		.withName(name)
+                 		.withPrice(price)
+                 		.withStock(stock)
+                 		.withVendorID(vendorID)
+                 		.build();
+                 break;
+             }
+         }
+         return productObj;
 	}
 
 	public List<Product> findAll() {
 		List<Product> productsList = new ArrayList<>();
 		
 		JSONObject con = SingletonKeyJson.getConnection();
-		JSONObject jsonObject = (JSONObject) con;
-		JSONArray productsJsonArray = (JSONArray) jsonObject.get("products");
+		JSONArray productsJsonArray = (JSONArray) con.get("products");
 		 
 		for ( Object ob : productsJsonArray) {
 			
 			JSONObject product = (JSONObject) ob;
-			
-			
+						
 			int id = ((Number) product.get("id")).intValue();
 			String name = (String) product.get("name");
             Double price = (Double) product.get("price");   
             int stock = ((Number) product.get("stock")).intValue();
+            int vendorID = ((Number) product.get("vendorID")).intValue();
                      
             Product productObj = new ProductBuilder()
             		.withId(id)
             		.withName(name)
             		.withPrice(price)
             		.withStock(stock)
+            		.withVendorID(vendorID)
             		.build();
             
             productsList.add(productObj);
@@ -56,9 +76,8 @@ public class ProductDao {
 	
 	@SuppressWarnings("unchecked")
 	
-	public void create(int id, String name, Double price, int stock) throws IOException {
-		 JSONObject con = SingletonKeyJson.getConnection();
-		 JSONArray productsList = (JSONArray) con.get("products");
+	public void create(int id, String name, Double price, int stock, int vendorID) throws IOException {
+		 JSONArray productsList = (JSONArray) SingletonKeyJson.getConnection().get("products");
 		 
 		 JSONObject product = new JSONObject();
 		 
@@ -66,11 +85,12 @@ public class ProductDao {
          product.put("name"  ,  name);
          product.put("price" ,  price);
          product.put("stock" ,  stock);
+         product.put("vendorID" ,  vendorID);
          
          productsList.add(product);
          
-         FileWriter fileWriter = new FileWriter("src/products.json");
-         fileWriter.write(FormatJson.formatJson(con.toJSONString()));
+         FileWriter fileWriter = new FileWriter("src/database.json");
+         fileWriter.write(FormatJson.formatJson(SingletonKeyJson.getConnection().toJSONString()));
          fileWriter.flush();
          fileWriter.close();
 	}

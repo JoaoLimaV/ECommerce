@@ -14,9 +14,12 @@ public class SingletonKeyJson {
 		if( SingletonKeyJson.con == null ) {
 			try {
 				JSONParser parser = new JSONParser();
-		        Object obj = parser.parse(new FileReader("src/products.json"));
-				JSONObject objJson = (JSONObject) obj;	
+		        Object obj = parser.parse(new FileReader("src/database.json"));
+				JSONObject objJson = (JSONObject) obj;
+				
 				SingletonKeyJson.con = objJson;
+				
+				
 			} catch (Exception e) {
 	            e.printStackTrace();
 	        }

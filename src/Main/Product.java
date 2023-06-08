@@ -6,14 +6,14 @@ public class Product {
 	private String name; 
 	private double price;
 	private int stock;
-	private Vendor vendor;
+	private int vendorID;
 	
-	public Product(int id, String name, double price, int stock, Vendor vendor) {
+	public Product(int id, String name, double price, int stock, int vendorID) {
 		this.id = id;
 		this.name = name;
 		this.price = price;
 		this.stock = stock;
-		this.vendor = vendor;
+		this.vendorID = vendorID;
 	}
 
 	public int getId() {
@@ -49,21 +49,28 @@ public class Product {
 	}
 	
 	
-	public Vendor getVendor() {
-		return vendor;
+	public int getVendorID() {
+		return vendorID;
 	}
 
-	public void setVendor(Vendor vendor) {
-		this.vendor = vendor;
+	public void setVendorID(int vendorID) {
+		this.vendorID = vendorID;
 	}
 
-	public void descProduct() {
-		System.out.printf("Id: %d, Nome : %s, Preço: %.2f, Estoque: %d\n", 
+	public void infoProduct() {
+		System.out.printf("Nome: %s\nPreço: %.2f", 
+						  this.name,
+						  this.price
+						  );
+	}
+	
+	public void specProduct() {
+		System.out.printf("Id: %d\nNome: %s\nPreço: %.2f\nEstoque: %d\n", 
 						  this.id, 
 						  this.name,
 						  this.price,
-						  this.stock,
-						  this.vendor);
+						  this.stock
+						  );
 	}
 
 }
