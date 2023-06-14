@@ -1,67 +1,60 @@
 package Main;
 
-public class Sale {
-	private int id; 
-	private int productId; 
-	private String productName; 
-	private double productPrice;
-	private int vendorID;
-	private String paymentType;
+import java.util.concurrent.ThreadLocalRandom;
 
-	public int getId() {
-		return id;
+import Strategy.Strategy;
+
+public class Sale <T extends Strategy> {
+	private int saleId = ThreadLocalRandom.current().nextInt(); 
+	private Product product; 
+	private Vendor vendor;
+	private T paymentType;
+	private int quant;
+	private double priceSale; 
+	
+	public int getSaleId() {
+		return saleId;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public Product getProduct() {
+		return product;
 	}
 
-	public int getProductId() {
-		return productId;
+	public void setProduct(Product product) {
+		this.product = product;
 	}
 
-	public void setProductId(int productId) {
-		this.productId = productId;
+	public Vendor getVendor() {
+		return vendor;
 	}
 
-	public String getProductName() {
-		return productName;
+	public void setVendor(Vendor vendor) {
+		this.vendor = vendor;
 	}
 
-	public void setProductName(String productName) {
-		this.productName = productName;
-	}
-
-	public double getProductPrice() {
-		return productPrice;
-	}
-
-	public void setProductPrice(double productPrice) {
-		this.productPrice = productPrice;
-	}
-
-	public int getVendorID() {
-		return vendorID;
-	}
-
-	public void setVendorID(int vendorID) {
-		this.vendorID = vendorID;
-	}
-
-	public String getPaymentType() {
+	public T getPaymentType() {
 		return paymentType;
 	}
 
-	public void setPaymentType(String paymentType) {
+	public void setPaymentType(T paymentType) {
 		this.paymentType = paymentType;
 	}
-	
-	public void infoSale() {
-		System.out.printf("Nome: %s\nPreço: %.2f\nForma de pagamento: %s\n", 
-						  this.productName,
-						  this.productPrice,
-						  this.paymentType
-						  );
+
+	public int getQuant() {
+		return quant;
 	}
+
+	public void setQuant(int quant) {
+		this.quant = quant;
+	}
+
+	public double getPriceSale() {
+		return priceSale;
+	}
+
+	public void descSale() {
+		System.out.printf("Id da Venda: %d, Produto: %s,  Vendedor: %s, Método de Pagamento: %s, Quantidade de Produto: %d, Preço da Compra: %.2f", this.saleId, this.product.getName(),this.vendor.getName(), this.paymentType.paymentMethod(), this.quant, this.priceSale  );
+	}
+
 	
 }

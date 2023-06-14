@@ -6,6 +6,7 @@ import java.util.Scanner;
 import Observer.SubjectProduct;
 import Strategy.PaymentCredit;
 import Strategy.PaymentDebit;
+import Strategy.Strategy;
 
 
 public class App {
@@ -34,6 +35,8 @@ public class App {
 			break;
 			
 			case 2: 	
+				Sale sale = new Sale();
+				
 				Panel.showProducts(allProducts);
 				System.out.print(colorsText.cyan("Digite o Id do Produto:"));
 				int productID = sc.nextInt();
@@ -42,18 +45,14 @@ public class App {
 			    Panel.PaymentMenu();
 				int paymentOption = sc.nextInt();
 				
-		    	Product product = productDao.find(productID);
-
-			    if (paymentOption == 1) {
-			        PaymentCredit payment = new PaymentCredit();
-			        payment.PaymentStrategy(product.getName(), product.getPrice());
-			    } else if (paymentOption == 2) {
-			        PaymentDebit payment = new PaymentDebit();
-			        payment.PaymentStrategy(product.getName(), product.getPrice());
-			    } else {
-			        System.out.println("Opção inválida.");
-			    }
-//				subject.sell(sc.nextInt());
+				Product product = productDao.find(productID);
+				Vendor vendor = vendorDao.find(product.getVendorID());
+				sale.setPaymentType ( ( paymentOption == 1 ) ? new PaymentCredit() : new PaymentDebit() );
+				sale.setProduct(product);
+				sale.setVendor(vendor);
+				sale.setQuant(qtd);
+			  
+				sale.descSale();
 			break;
 			
 			case 0: 
@@ -64,8 +63,8 @@ public class App {
 			
 			}
 			
-			System.out.print("Pressione Enter para continuar...");
-	        sc.nextLine();
+			System.out.print("Pressione S ou Y para continuar: ");
+	        sc.next();
 			
 			Panel.clearPrompt();
 		}

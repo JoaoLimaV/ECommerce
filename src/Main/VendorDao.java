@@ -7,13 +7,31 @@ import java.util.List;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+
+import Builder.ProductBuilder;
 import Crud.FormatJson;
 import Singleton.SingletonKeyJson;
 
 public class VendorDao {
 	
-	public Vendor find(long id) {
-		return null;
+	public Vendor find(int idVendor) {
+		JSONArray vendors = (JSONArray) SingletonKeyJson.getConnection().get("vendors");
+		 Vendor vendorObj = null;
+		 
+        for (Object ob : vendors) {
+            JSONObject vendor = (JSONObject) ob;
+
+            int id = ((Number) vendor.get("id")).intValue();
+            
+            if (id == idVendor) {
+            	String name         = (String)  vendor.get("name");
+    			String cnpj         = (String)  vendor.get("cnpj");   
+                double ratingsStars = (Double)  vendor.get("ratingsStars");
+                vendorObj = new Vendor(id, name, cnpj, ratingsStars);
+                break;
+            }
+        }
+        return vendorObj;
 	}
 
 	public List<Vendor> findAll() {
