@@ -1,6 +1,10 @@
 package Main;
 
+import java.util.Scanner;
+
 import Observer.InterfaceObserver;
+import Strategy.PaymentCredit;
+import Strategy.PaymentDebit;
 
 public class Vendor implements InterfaceObserver{
 
@@ -33,9 +37,8 @@ public class Vendor implements InterfaceObserver{
 	}
 
 	@Override
-	public void sellProduct(Product product) {
-		System.out.println("\n\u001B[32m Você Acaba de Vender um Produto!!! \033[0m");
-		product.infoProduct();
+	public void sellProduct() {
+	
 	}
 
 }

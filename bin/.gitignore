@@ -3,7 +3,6 @@
 /Main/
 /Observer/
 /Singleton/
-/libs/
-/products.json
-/vendor.json
 /database.json
+/libs/
+/Strategy/

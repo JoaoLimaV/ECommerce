@@ -40,6 +40,7 @@ public class Panel {
 		}
 
 		System.out.println("------------------------------------------------------------------------------");
+		
 	}
 	
 	public static void Menu() {
@@ -57,6 +58,21 @@ public class Panel {
         
         System.out.print(colorsText.cyan(":"));     
         
+	}
+	
+	public static void PaymentMenu() {
+		
+		System.out.println( colorsText.yellow("-- Escolha uma opção de acordo com o número --"));
+
+		
+		System.out.println(colorsText.yellow("------------------------------------------"));
+        System.out.println(colorsText.cyan("1") + " - Credito");
+        System.out.println(colorsText.cyan("2") + " - Debito");
+        System.out.println(colorsText.yellow("------------------------------------------"));
+        
+        System.out.print(colorsText.cyan(":"));  
+        
+		System.out.print(colorsText.cyan("Digite a forma de pagamento:"));
         
 	}
 	

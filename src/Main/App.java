@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Scanner;
 
 import Observer.SubjectProduct;
+import Strategy.PaymentCredit;
+import Strategy.PaymentDebit;
 
 
 public class App {
@@ -34,7 +36,24 @@ public class App {
 			case 2: 	
 				Panel.showProducts(allProducts);
 				System.out.print(colorsText.cyan("Digite o Id do Produto:"));
-				subject.sell(sc.nextInt());
+				int productID = sc.nextInt();
+				System.out.print(colorsText.cyan("Digite a quantidade desejada:"));
+				int qtd = sc.nextInt();
+			    Panel.PaymentMenu();
+				int paymentOption = sc.nextInt();
+				
+		    	Product product = productDao.find(productID);
+
+			    if (paymentOption == 1) {
+			        PaymentCredit payment = new PaymentCredit();
+			        payment.PaymentStrategy(product.getName(), product.getPrice());
+			    } else if (paymentOption == 2) {
+			        PaymentDebit payment = new PaymentDebit();
+			        payment.PaymentStrategy(product.getName(), product.getPrice());
+			    } else {
+			        System.out.println("Opção inválida.");
+			    }
+//				subject.sell(sc.nextInt());
 			break;
 			
 			case 0: 
