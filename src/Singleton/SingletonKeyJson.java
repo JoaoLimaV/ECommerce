@@ -4,8 +4,10 @@ import java.io.FileReader;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
+import Proxy.ServiceConnection;
 
-public class SingletonKeyJson {
+
+public class SingletonKeyJson implements ServiceConnection {
 	
 	private static JSONObject con;
 	

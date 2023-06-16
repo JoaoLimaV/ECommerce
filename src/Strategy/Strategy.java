@@ -2,6 +2,7 @@ package Strategy;
 
 public interface Strategy {
 
-    public String paymentMethod();
+    public double paymentMethod();
+    public String namePaymentMethod();
 
 }

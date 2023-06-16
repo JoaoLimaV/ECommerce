@@ -8,16 +8,14 @@ import java.util.List;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-import Crud.FormatJson;
-
-import Singleton.SingletonKeyJson;
-
 import Builder.ProductBuilder;
+import Crud.FormatJson;
+import Proxy.ProxyConnection;
 
-public class ProductDao {
+public class ProductDAO {
 
 	public Product find(int idProduct) {
-		 JSONArray products = (JSONArray) SingletonKeyJson.getConnection().get("products");
+		 JSONArray products = (JSONArray) ProxyConnection.getConnection().get("products");
 		 Product productObj = null;
 		 
          for (Object ob : products) {
@@ -47,7 +45,7 @@ public class ProductDao {
 	public List<Product> findAll() {
 		List<Product> productsList = new ArrayList<>();
 		
-		JSONObject con = SingletonKeyJson.getConnection();
+		JSONObject con = ProxyConnection.getConnection();
 		JSONArray productsJsonArray = (JSONArray) con.get("products");
 		 
 		for ( Object ob : productsJsonArray) {
@@ -77,7 +75,7 @@ public class ProductDao {
 	@SuppressWarnings("unchecked")
 	
 	public void create(int id, String name, Double price, int stock, int vendorID) throws IOException {
-		 JSONArray productsList = (JSONArray) SingletonKeyJson.getConnection().get("products");
+		 JSONArray productsList = (JSONArray) ProxyConnection.getConnection().get("products");
 		 
 		 JSONObject product = new JSONObject();
 		 
@@ -90,7 +88,7 @@ public class ProductDao {
          productsList.add(product);
          
          FileWriter fileWriter = new FileWriter("src/database.json");
-         fileWriter.write(FormatJson.formatJson(SingletonKeyJson.getConnection().toJSONString()));
+         fileWriter.write(FormatJson.formatJson(ProxyConnection.getConnection().toJSONString()));
          fileWriter.flush();
          fileWriter.close();
 	}

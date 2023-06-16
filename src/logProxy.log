@@ -1,0 +1,27 @@
+jun. 15, 2023 11:10:03 PM Proxy.ProxyConnection getConnection
+INFORMAÇÕES: A classe Main.App teve seu acesso negado a classe de banco de dados
+
+jun. 15, 2023 11:10:03 PM Proxy.ProxyConnection getConnection
+INFORMAÇÕES: A classe Main.VendorDAO obteve acesso a classe de banco de dados
+
+jun. 15, 2023 11:10:03 PM Proxy.ProxyConnection getConnection
+INFORMAÇÕES: A classe Main.ProductDAO obteve acesso a classe de banco de dados
+
+jun. 15, 2023 11:13:00 PM Proxy.ProxyConnection getConnection
+INFORMAÇÕES: A classe Main.App teve seu acesso negado a classe de banco de dados
+
+jun. 15, 2023 11:13:00 PM Proxy.ProxyConnection getConnection
+INFORMAÇÕES: A classe Main.VendorDAO obteve acesso a classe de banco de dados
+
+jun. 15, 2023 11:13:00 PM Proxy.ProxyConnection getConnection
+INFORMAÇÕES: A classe Main.ProductDAO obteve acesso a classe de banco de dados
+
+jun. 15, 2023 11:14:52 PM Proxy.ProxyConnection getConnection
+INFORMAÇÕES: A classe Main.App teve seu acesso negado a classe de banco de dados
+
+jun. 15, 2023 11:14:52 PM Proxy.ProxyConnection getConnection
+INFORMAÇÕES: A classe Main.VendorDAO obteve acesso a classe de banco de dados
+
+jun. 15, 2023 11:14:52 PM Proxy.ProxyConnection getConnection
+INFORMAÇÕES: A classe Main.ProductDAO obteve acesso a classe de banco de dados
+

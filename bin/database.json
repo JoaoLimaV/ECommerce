@@ -21,7 +21,7 @@
     ],
     "products":[
         {
-            "price":00.00,
+            "price":100.0,
             "name":"Processador Intel Core i3 10000F",
             "vendorID":1,
             "id":1,

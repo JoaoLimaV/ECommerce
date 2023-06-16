@@ -8,14 +8,13 @@ import java.util.List;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-import Builder.ProductBuilder;
 import Crud.FormatJson;
-import Singleton.SingletonKeyJson;
+import Proxy.ProxyConnection;
 
-public class VendorDao {
+public class VendorDAO {
 	
 	public Vendor find(int idVendor) {
-		JSONArray vendors = (JSONArray) SingletonKeyJson.getConnection().get("vendors");
+		JSONArray vendors = (JSONArray) ProxyConnection.getConnection().get("vendors");
 		 Vendor vendorObj = null;
 		 
         for (Object ob : vendors) {
@@ -37,7 +36,7 @@ public class VendorDao {
 	public List<Vendor> findAll() {
 		List<Vendor> vendorsList = new ArrayList<>();
 
-		JSONArray vendorsJsonArray = (JSONArray) SingletonKeyJson.getConnection().get("vendors");
+		JSONArray vendorsJsonArray = (JSONArray) ProxyConnection.getConnection().get("vendors");
 		 
 		for ( Object ob : vendorsJsonArray) {
 			
@@ -58,7 +57,7 @@ public class VendorDao {
 	@SuppressWarnings("unchecked")
 	
 	public void create(int id, String name, String cnpj, int ratingsStars) throws IOException {
-		 JSONArray vendorsList = (JSONArray) SingletonKeyJson.getConnection().get("vendors");
+		 JSONArray vendorsList = (JSONArray) ProxyConnection.getConnection().get("vendors");
 		 
 		 JSONObject vendor = new JSONObject();
 		 
@@ -70,7 +69,7 @@ public class VendorDao {
          vendorsList.add(vendor);
          
          FileWriter fileWriter = new FileWriter("src/database.json");
-         fileWriter.write(FormatJson.formatJson(SingletonKeyJson.getConnection().toJSONString()));
+         fileWriter.write(FormatJson.formatJson(ProxyConnection.getConnection().toJSONString()));
          fileWriter.flush();
          fileWriter.close();
 	}

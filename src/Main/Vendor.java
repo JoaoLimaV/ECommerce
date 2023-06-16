@@ -1,10 +1,9 @@
 package Main;
 
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
 import Observer.InterfaceObserver;
-import Strategy.PaymentCredit;
-import Strategy.PaymentDebit;
 
 public class Vendor implements InterfaceObserver{
 
@@ -12,6 +11,7 @@ public class Vendor implements InterfaceObserver{
 	private String name;
 	private String cnpj;
 	private double ratingsStars;
+	private List<Sale> sales =  new ArrayList<>();
 	
 	public Vendor(int id, String name, String cnpj, double ratingsStars) {
 		this.id = id;
@@ -37,8 +37,11 @@ public class Vendor implements InterfaceObserver{
 	}
 
 	@Override
-	public void sellProduct() {
 	
+	public void selledProduct(Sale sale) {
+		sale.descSaleForUser();
+		this.sales.add(sale);
 	}
+
 
 }

@@ -4,11 +4,11 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import Strategy.Strategy;
 
-public class Sale <T extends Strategy> {
-	private int saleId = ThreadLocalRandom.current().nextInt(); 
+public class Sale{
+	private int saleId = Math.abs(ThreadLocalRandom.current().nextInt(Integer.MAX_VALUE));
 	private Product product; 
 	private Vendor vendor;
-	private T paymentType;
+	private Strategy paymentType;
 	private int quant;
 	private double priceSale; 
 	
@@ -32,11 +32,11 @@ public class Sale <T extends Strategy> {
 		this.vendor = vendor;
 	}
 
-	public T getPaymentType() {
+	public  Strategy getPaymentType() {
 		return paymentType;
 	}
 
-	public void setPaymentType(T paymentType) {
+	public void setPaymentType( Strategy paymentType) {
 		this.paymentType = paymentType;
 	}
 
@@ -51,9 +51,17 @@ public class Sale <T extends Strategy> {
 	public double getPriceSale() {
 		return priceSale;
 	}
+	
+	public void calculeSale() {
+		this.priceSale = (this.quant * this.product.getPrice()) + (this.product.getPrice() * paymentType.paymentMethod()) ;
+	}
 
-	public void descSale() {
-		System.out.printf("Id da Venda: %d, Produto: %s,  Vendedor: %s, Método de Pagamento: %s, Quantidade de Produto: %d, Preço da Compra: %.2f", this.saleId, this.product.getName(),this.vendor.getName(), this.paymentType.paymentMethod(), this.quant, this.priceSale  );
+	public void descSaleForUser() {
+		System.out.printf("Id da Venda: %d, Produto: %s,  Vendedor: %s, Método de Pagamento: %s, Quantidade de Produto: %d, Preço da Compra: %.2f", this.saleId, this.product.getName(),this.vendor.getName(), this.paymentType.namePaymentMethod(), this.quant, this.priceSale  );
+	}
+	
+	public void descSaleForVendor() {
+		System.out.printf("Id da Venda: %d, Produto: %s, Método de Pagamento: %s, Quantidade de Produto: %d, Preço da Compra: %.2f", this.saleId, this.product.getName(), this.paymentType.namePaymentMethod(), this.quant, this.priceSale  );
 	}
 
 	

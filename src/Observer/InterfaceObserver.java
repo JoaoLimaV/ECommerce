@@ -1,7 +1,8 @@
 package Observer;
 
-import Main.Product;
+import Main.Sale;
+import Strategy.Strategy;
 
 public interface InterfaceObserver {
-		public void sellProduct();
+		public void selledProduct(Sale sale);
 }
