@@ -9,7 +9,7 @@ public class ProductBuilder {
 	private String name; 
 	private double price;
 	private int stock;
-	private int vendorID;
+	private Vendor vendor;
 	
 	public ProductBuilder withId (int id) {
 		this.id = id;
@@ -31,8 +31,8 @@ public class ProductBuilder {
 		return this;
 	}
 	
-	public ProductBuilder withVendorID (int vendorID) {
-		this.vendorID = vendorID;
+	public ProductBuilder withVendor (Vendor vendor) {
+		this.vendor = vendor;
 		return this;
 	}
 	
@@ -41,7 +41,7 @@ public class ProductBuilder {
 				, this.name
 				, this.price
 				, this.stock
-				, this.vendorID);
+				, this.vendor);
 	}
 
 }

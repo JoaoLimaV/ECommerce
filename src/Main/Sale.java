@@ -57,11 +57,11 @@ public class Sale{
 	}
 
 	public void descSaleForUser() {
-		System.out.printf("Id da Venda: %d, Produto: %s,  Vendedor: %s, Método de Pagamento: %s, Quantidade de Produto: %d, Preço da Compra: %.2f", this.saleId, this.product.getName(),this.vendor.getName(), this.paymentType.namePaymentMethod(), this.quant, this.priceSale  );
+		System.out.printf("Id da Venda: %d, Produto: %s,  Vendedor: %s, Método de Pagamento: %s, Quantidade de Produto: %d, Preço da Compra: %.2f\n", this.saleId, this.product.getName(),this.vendor.getName(), this.paymentType.namePaymentMethod(), this.quant, this.priceSale  );
 	}
 	
 	public void descSaleForVendor() {
-		System.out.printf("Id da Venda: %d, Produto: %s, Método de Pagamento: %s, Quantidade de Produto: %d, Preço da Compra: %.2f", this.saleId, this.product.getName(), this.paymentType.namePaymentMethod(), this.quant, this.priceSale  );
+		System.out.printf("Id da Venda: %d, Produto: %s, Método de Pagamento: %s, Quantidade de Produto: %d, Preço da Compra: %.2f\n", this.saleId, this.product.getName(), this.paymentType.namePaymentMethod(), this.quant, this.priceSale  );
 	}
 
 	

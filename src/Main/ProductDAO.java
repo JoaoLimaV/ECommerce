@@ -13,11 +13,13 @@ import Crud.FormatJson;
 import Proxy.ProxyConnection;
 
 public class ProductDAO {
-
+	private VendorDAO  vendorDAO  = new VendorDAO();
+	
 	public Product find(int idProduct) {
 		 JSONArray products = (JSONArray) ProxyConnection.getConnection().get("products");
 		 Product productObj = null;
 		 
+
          for (Object ob : products) {
              JSONObject product = (JSONObject) ob;
 
@@ -34,7 +36,7 @@ public class ProductDAO {
                  		.withName(name)
                  		.withPrice(price)
                  		.withStock(stock)
-                 		.withVendorID(vendorID)
+                 		.withVendor(this.vendorDAO.find(vendorID))
                  		.build();
                  break;
              }
@@ -63,7 +65,7 @@ public class ProductDAO {
             		.withName(name)
             		.withPrice(price)
             		.withStock(stock)
-            		.withVendorID(vendorID)
+            		.withVendor(this.vendorDAO.find(vendorID))
             		.build();
             
             productsList.add(productObj);

@@ -11,7 +11,7 @@ public class Vendor implements InterfaceObserver{
 	private String name;
 	private String cnpj;
 	private double ratingsStars;
-	private List<Sale> sales =  new ArrayList<>();
+	public List<Sale> sales =  new ArrayList<>();
 	
 	public Vendor(int id, String name, String cnpj, double ratingsStars) {
 		this.id = id;
@@ -39,7 +39,6 @@ public class Vendor implements InterfaceObserver{
 	@Override
 	
 	public void selledProduct(Sale sale) {
-		sale.descSaleForUser();
 		this.sales.add(sale);
 	}
 
