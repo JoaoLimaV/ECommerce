@@ -56,10 +56,6 @@ public class Sale{
 		this.priceSale = (this.quant * this.product.getPrice()) + (this.product.getPrice() * paymentType.paymentMethod()) ;
 	}
 
-	public void descSaleForUser() {
-		System.out.printf("Id da Venda: %d, Produto: %s,  Vendedor: %s, Método de Pagamento: %s, Quantidade de Produto: %d, Preço da Compra: %.2f\n", this.saleId, this.product.getName(),this.vendor.getName(), this.paymentType.namePaymentMethod(), this.quant, this.priceSale  );
-	}
-	
 	public void descSaleForVendor() {
 		System.out.printf("Id da Venda: %d, Produto: %s, Método de Pagamento: %s, Quantidade de Produto: %d, Preço da Compra: %.2f\n", this.saleId, this.product.getName(), this.paymentType.namePaymentMethod(), this.quant, this.priceSale  );
 	}

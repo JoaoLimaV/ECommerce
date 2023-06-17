@@ -36,7 +36,6 @@ public class ProxyConnection implements ServiceConnection {
             fileHandler.close(); 
             fileHandler = null;
         }
-
         
 		return SingletonKeyJson.getConnection();
 	}

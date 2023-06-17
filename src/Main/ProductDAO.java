@@ -4,12 +4,12 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
+import Adapter.ExternalLibFormatJson;
+import Adapter.AdapterLibFormatJson;
 import Builder.ProductBuilder;
-import Crud.FormatJson;
 import Proxy.ProxyConnection;
 
 public class ProductDAO {
@@ -89,10 +89,13 @@ public class ProductDAO {
          
          productsList.add(product);
          
-         FileWriter fileWriter = new FileWriter("src/database.json");
-         fileWriter.write(FormatJson.formatJson(ProxyConnection.getConnection().toJSONString()));
-         fileWriter.flush();
-         fileWriter.close();
+         AdapterLibFormatJson format = new AdapterLibFormatJson();
+         String formattedJson = format.formatJson(ProxyConnection.getConnection().toJSONString());
+        
+ 		 FileWriter fileWriter = new FileWriter("src/database.json");
+	     fileWriter.write(formattedJson);
+	     fileWriter.flush();
+	     fileWriter.close();
 	}
 
 }

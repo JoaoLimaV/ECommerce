@@ -26,6 +26,7 @@ public class SubjectProduct {
 	    	
 	    	for (Vendor obVendor : observers) {
 	    	    	if (obVendor.getId() == sale.getVendor().getId()) {
+	    	    		System.out.println(sale.getVendor().getId());
 	    	    		obVendor.selledProduct(sale);
 	    	    		break;
 	    	    	}

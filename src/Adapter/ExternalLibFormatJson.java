@@ -1,7 +1,9 @@
-package Crud;
+package Adapter;
 
-public class FormatJson {
-    public static String formatJson(String jsonString) {
+public class ExternalLibFormatJson {
+	
+    public String formatJson(String jsonString) {
+    	
         StringBuilder formattedJson = new StringBuilder();
 
         int indentLevel = 0;
