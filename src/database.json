@@ -19,6 +19,242 @@
             "ratingsStars":1.0
         }
     ],
+    "sales":[
+        {
+            "datetime":"17\/06\/2023 22:09:47",
+            "quantity":1,
+            "productID":2,
+            "price":17.991,
+            "vendorID":1,
+            "id":1700840665,
+            "paymentType":"Débito"
+        },
+        {
+            "datetime":"17\/06\/2023 22:37:25",
+            "quantity":4,
+            "productID":2,
+            "price":77.961,
+            "vendorID":1,
+            "id":162720220,
+            "paymentType":"Débito"
+        },
+        {
+            "datetime":"17\/06\/2023 23:05:29",
+            "quantity":213,
+            "productID":1,
+            "price":21310.0,
+            "vendorID":1,
+            "id":1654170337,
+            "paymentType":"Crédito"
+        },
+        {
+            "datetime":"17\/06\/2023 23:05:36",
+            "quantity":12,
+            "productID":5,
+            "price":1814.8790000000001,
+            "vendorID":2,
+            "id":1054777607,
+            "paymentType":"Crédito"
+        },
+        {
+            "datetime":"17\/06\/2023 23:05:41",
+            "quantity":1,
+            "productID":9,
+            "price":53.991,
+            "vendorID":3,
+            "id":1800497159,
+            "paymentType":"Débito"
+        },
+        {
+            "datetime":"17\/06\/2023 23:05:44",
+            "quantity":1,
+            "productID":8,
+            "price":179.991,
+            "vendorID":3,
+            "id":542702763,
+            "paymentType":"Débito"
+        },
+        {
+            "datetime":"17\/06\/2023 23:05:47",
+            "quantity":22,
+            "productID":6,
+            "price":1751.781,
+            "vendorID":2,
+            "id":2119544515,
+            "paymentType":"Débito"
+        },
+        {
+            "datetime":"17\/06\/2023 23:05:49",
+            "quantity":222,
+            "productID":7,
+            "price":66567.781,
+            "vendorID":3,
+            "id":1845874532,
+            "paymentType":"Débito"
+        },
+        {
+            "datetime":"17\/06\/2023 23:05:52",
+            "quantity":333,
+            "productID":3,
+            "price":33286.670999999995,
+            "vendorID":1,
+            "id":666827480,
+            "paymentType":"Débito"
+        },
+        {
+            "datetime":"17\/06\/2023 23:05:55",
+            "quantity":23,
+            "productID":7,
+            "price":6869.771000000001,
+            "vendorID":3,
+            "id":1843685332,
+            "paymentType":"Débito"
+        },
+        {
+            "datetime":"17\/06\/2023 23:05:57",
+            "quantity":12,
+            "productID":7,
+            "price":3569.8810000000003,
+            "vendorID":3,
+            "id":1621865957,
+            "paymentType":"Débito"
+        },
+        {
+            "datetime":"17\/06\/2023 23:07:20",
+            "quantity":11,
+            "productID":3,
+            "price":1089.8909999999998,
+            "vendorID":1,
+            "id":1631248583,
+            "paymentType":"Débito"
+        },
+        {
+            "datetime":"17\/06\/2023 23:07:23",
+            "quantity":11,
+            "productID":2,
+            "price":217.891,
+            "vendorID":1,
+            "id":1853835734,
+            "paymentType":"Débito"
+        },
+        {
+            "datetime":"17\/06\/2023 23:07:26",
+            "quantity":1,
+            "productID":1,
+            "price":90.0,
+            "vendorID":1,
+            "id":93386471,
+            "paymentType":"Débito"
+        },
+        {
+            "datetime":"17\/06\/2023 23:07:50",
+            "quantity":1,
+            "productID":2,
+            "price":17.991,
+            "vendorID":1,
+            "id":448102874,
+            "paymentType":"Débito"
+        },
+        {
+            "datetime":"17\/06\/2023 23:10:34",
+            "quantity":1,
+            "productID":1,
+            "price":110.0,
+            "vendorID":1,
+            "id":1866587195,
+            "paymentType":"Crédito"
+        },
+        {
+            "datetime":"17\/06\/2023 23:10:37",
+            "quantity":1,
+            "productID":2,
+            "price":17.991,
+            "vendorID":1,
+            "id":993633174,
+            "paymentType":"Débito"
+        },
+        {
+            "datetime":"17\/06\/2023 23:14:24",
+            "quantity":1,
+            "productID":1,
+            "price":90.0,
+            "vendorID":1,
+            "id":1004283462,
+            "paymentType":"Débito"
+        },
+        {
+            "datetime":"17\/06\/2023 23:14:43",
+            "quantity":1,
+            "productID":2,
+            "price":17.991,
+            "vendorID":1,
+            "id":635444795,
+            "paymentType":"Débito"
+        },
+        {
+            "datetime":"17\/06\/2023 23:14:44",
+            "quantity":1,
+            "productID":3,
+            "price":89.991,
+            "vendorID":1,
+            "id":758310583,
+            "paymentType":"Débito"
+        },
+        {
+            "datetime":"17\/06\/2023 23:14:47",
+            "quantity":1,
+            "productID":4,
+            "price":44.991,
+            "vendorID":2,
+            "id":990746521,
+            "paymentType":"Débito"
+        },
+        {
+            "datetime":"17\/06\/2023 23:14:49",
+            "quantity":1,
+            "productID":5,
+            "price":134.991,
+            "vendorID":2,
+            "id":296972373,
+            "paymentType":"Débito"
+        },
+        {
+            "datetime":"17\/06\/2023 23:14:50",
+            "quantity":1,
+            "productID":6,
+            "price":71.991,
+            "vendorID":2,
+            "id":218099305,
+            "paymentType":"Débito"
+        },
+        {
+            "datetime":"17\/06\/2023 23:14:53",
+            "quantity":1,
+            "productID":7,
+            "price":269.991,
+            "vendorID":3,
+            "id":2136954568,
+            "paymentType":"Débito"
+        },
+        {
+            "datetime":"17\/06\/2023 23:14:55",
+            "quantity":1,
+            "productID":8,
+            "price":179.991,
+            "vendorID":3,
+            "id":796682638,
+            "paymentType":"Débito"
+        },
+        {
+            "datetime":"17\/06\/2023 23:14:58",
+            "quantity":1,
+            "productID":9,
+            "price":53.991,
+            "vendorID":3,
+            "id":945299332,
+            "paymentType":"Débito"
+        }
+    ],
     "products":[
         {
             "price":100.0,
