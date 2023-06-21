@@ -1,78 +1,42 @@
-jun. 19, 2023 8:02:03 PM ecommerce.proxy.ProxyConnection getConnection
-INFO: A classe ecommerce.facade.UsetInterfaceFacade teve seu acesso negado a classe de banco de dados
+jun. 20, 2023 10:54:56 PM ecommerce.proxy.ProxyConnection getConnection
+INFORMAÇÕES: A classe ecommerce.facade.UsetInterfaceFacade teve seu acesso negado a classe de banco de dados
 
-jun. 19, 2023 8:02:03 PM ecommerce.proxy.ProxyConnection getConnection
-INFO: A classe ecommerce.dao.VendorDAO obteve acesso a classe de banco de dados
+jun. 20, 2023 10:54:56 PM ecommerce.proxy.ProxyConnection getConnection
+INFORMAÇÕES: A classe ecommerce.dao.VendorDAO obteve acesso a classe de banco de dados
 
-jun. 19, 2023 8:02:03 PM ecommerce.proxy.ProxyConnection getConnection
-INFO: A classe ecommerce.dao.ProductDAO obteve acesso a classe de banco de dados
+jun. 20, 2023 10:54:56 PM ecommerce.proxy.ProxyConnection getConnection
+INFORMAÇÕES: A classe ecommerce.dao.ProductDAO obteve acesso a classe de banco de dados
 
-jun. 19, 2023 8:02:03 PM ecommerce.proxy.ProxyConnection getConnection
-INFO: A classe ecommerce.dao.VendorDAO obteve acesso a classe de banco de dados
+jun. 20, 2023 10:54:56 PM ecommerce.proxy.ProxyConnection getConnection
+INFORMAÇÕES: A classe ecommerce.dao.VendorDAO obteve acesso a classe de banco de dados
 
-jun. 19, 2023 8:02:03 PM ecommerce.proxy.ProxyConnection getConnection
-INFO: A classe ecommerce.dao.VendorDAO obteve acesso a classe de banco de dados
+jun. 20, 2023 10:54:56 PM ecommerce.proxy.ProxyConnection getConnection
+INFORMAÇÕES: A classe ecommerce.dao.VendorDAO obteve acesso a classe de banco de dados
 
-jun. 19, 2023 8:02:03 PM ecommerce.proxy.ProxyConnection getConnection
-INFO: A classe ecommerce.dao.VendorDAO obteve acesso a classe de banco de dados
+jun. 20, 2023 10:54:56 PM ecommerce.proxy.ProxyConnection getConnection
+INFORMAÇÕES: A classe ecommerce.dao.VendorDAO obteve acesso a classe de banco de dados
 
-jun. 19, 2023 8:02:03 PM ecommerce.proxy.ProxyConnection getConnection
-INFO: A classe ecommerce.dao.VendorDAO obteve acesso a classe de banco de dados
+jun. 20, 2023 10:54:56 PM ecommerce.proxy.ProxyConnection getConnection
+INFORMAÇÕES: A classe ecommerce.dao.VendorDAO obteve acesso a classe de banco de dados
 
-jun. 19, 2023 8:02:03 PM ecommerce.proxy.ProxyConnection getConnection
-INFO: A classe ecommerce.dao.VendorDAO obteve acesso a classe de banco de dados
+jun. 20, 2023 10:54:56 PM ecommerce.proxy.ProxyConnection getConnection
+INFORMAÇÕES: A classe ecommerce.dao.VendorDAO obteve acesso a classe de banco de dados
 
-jun. 19, 2023 8:02:03 PM ecommerce.proxy.ProxyConnection getConnection
-INFO: A classe ecommerce.dao.VendorDAO obteve acesso a classe de banco de dados
+jun. 20, 2023 10:54:56 PM ecommerce.proxy.ProxyConnection getConnection
+INFORMAÇÕES: A classe ecommerce.dao.VendorDAO obteve acesso a classe de banco de dados
 
-jun. 19, 2023 8:02:03 PM ecommerce.proxy.ProxyConnection getConnection
-INFO: A classe ecommerce.dao.VendorDAO obteve acesso a classe de banco de dados
+jun. 20, 2023 10:54:56 PM ecommerce.proxy.ProxyConnection getConnection
+INFORMAÇÕES: A classe ecommerce.dao.VendorDAO obteve acesso a classe de banco de dados
 
-jun. 19, 2023 8:02:03 PM ecommerce.proxy.ProxyConnection getConnection
-INFO: A classe ecommerce.dao.VendorDAO obteve acesso a classe de banco de dados
+jun. 20, 2023 10:54:56 PM ecommerce.proxy.ProxyConnection getConnection
+INFORMAÇÕES: A classe ecommerce.dao.VendorDAO obteve acesso a classe de banco de dados
 
-jun. 19, 2023 8:02:03 PM ecommerce.proxy.ProxyConnection getConnection
-INFO: A classe ecommerce.dao.VendorDAO obteve acesso a classe de banco de dados
+jun. 20, 2023 10:54:56 PM ecommerce.proxy.ProxyConnection getConnection
+INFORMAÇÕES: A classe ecommerce.dao.VendorDAO obteve acesso a classe de banco de dados
 
-jun. 19, 2023 8:02:54 PM ecommerce.proxy.ProxyConnection getConnection
-INFO: A classe ecommerce.facade.UsetInterfaceFacade teve seu acesso negado a classe de banco de dados
+jun. 20, 2023 10:55:00 PM ecommerce.proxy.ProxyConnection getConnection
+INFORMAÇÕES: A classe ecommerce.dao.SaleDAO obteve acesso a classe de banco de dados
 
-jun. 19, 2023 8:02:54 PM ecommerce.proxy.ProxyConnection getConnection
-INFO: A classe ecommerce.dao.VendorDAO obteve acesso a classe de banco de dados
-
-jun. 19, 2023 8:02:54 PM ecommerce.proxy.ProxyConnection getConnection
-INFO: A classe ecommerce.dao.ProductDAO obteve acesso a classe de banco de dados
-
-jun. 19, 2023 8:02:54 PM ecommerce.proxy.ProxyConnection getConnection
-INFO: A classe ecommerce.dao.VendorDAO obteve acesso a classe de banco de dados
-
-jun. 19, 2023 8:02:54 PM ecommerce.proxy.ProxyConnection getConnection
-INFO: A classe ecommerce.dao.VendorDAO obteve acesso a classe de banco de dados
-
-jun. 19, 2023 8:02:54 PM ecommerce.proxy.ProxyConnection getConnection
-INFO: A classe ecommerce.dao.VendorDAO obteve acesso a classe de banco de dados
-
-jun. 19, 2023 8:02:54 PM ecommerce.proxy.ProxyConnection getConnection
-INFO: A classe ecommerce.dao.VendorDAO obteve acesso a classe de banco de dados
-
-jun. 19, 2023 8:02:54 PM ecommerce.proxy.ProxyConnection getConnection
-INFO: A classe ecommerce.dao.VendorDAO obteve acesso a classe de banco de dados
-
-jun. 19, 2023 8:02:54 PM ecommerce.proxy.ProxyConnection getConnection
-INFO: A classe ecommerce.dao.VendorDAO obteve acesso a classe de banco de dados
-
-jun. 19, 2023 8:02:54 PM ecommerce.proxy.ProxyConnection getConnection
-INFO: A classe ecommerce.dao.VendorDAO obteve acesso a classe de banco de dados
-
-jun. 19, 2023 8:02:54 PM ecommerce.proxy.ProxyConnection getConnection
-INFO: A classe ecommerce.dao.VendorDAO obteve acesso a classe de banco de dados
-
-jun. 19, 2023 8:02:54 PM ecommerce.proxy.ProxyConnection getConnection
-INFO: A classe ecommerce.dao.VendorDAO obteve acesso a classe de banco de dados
-
-jun. 19, 2023 8:03:02 PM ecommerce.proxy.ProxyConnection getConnection
-INFO: A classe ecommerce.dao.SaleDAO obteve acesso a classe de banco de dados
-
-jun. 19, 2023 8:03:02 PM ecommerce.proxy.ProxyConnection getConnection
-INFO: A classe ecommerce.dao.SaleDAO obteve acesso a classe de banco de dados
+jun. 20, 2023 10:55:00 PM ecommerce.proxy.ProxyConnection getConnection
+INFORMAÇÕES: A classe ecommerce.dao.SaleDAO obteve acesso a classe de banco de dados
 

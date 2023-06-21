@@ -18,6 +18,9 @@ import ecommerce.strategy.Strategy;
 
 public class SaleDAO {
 	
+    private ProductDAO productDAO = new ProductDAO();
+    private VendorDAO vendorDAO   = new VendorDAO();
+    
 	@SuppressWarnings("unchecked")
 	
 	public void create(Sale sale) throws IOException {
@@ -64,11 +67,8 @@ public class SaleDAO {
             Double price = (Double) sale.get("price");   
             String datetime = (String) sale.get("paymentType");
 
-            ProductDAO productDAO = new ProductDAO();
-            VendorDAO vendorDAO   = new VendorDAO();
-
-            Product product = productDAO.find(productID);
-            Vendor  vendor  = vendorDAO.find(vendorID);
+            Product product = this.productDAO.find(productID);
+            Vendor  vendor  = this.vendorDAO.find(vendorID);
 			Strategy paymentMethod = ( payment == "Crédito" ) ? new PaymentCredit() : new PaymentDebit();
 
 			Sale saleObj = new SaleBuilder()

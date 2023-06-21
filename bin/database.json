@@ -21,13 +21,13 @@
     ],
     "sales":[
         {
-            "datetime":"19\/06\/2023 20:03:02",
-            "quantity":1,
+            "datetime":"20\/06\/2023 22:55:00",
+            "quantity":2,
             "productID":1,
-            "price":95.0,
+            "price":190.0,
             "vendorID":1,
-            "id":1856314153,
-            "paymentType":"Crédito"
+            "id":2098336904,
+            "paymentType":"Débito"
         }
     ],
     "products":[
